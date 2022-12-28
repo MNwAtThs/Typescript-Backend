@@ -1,12 +1,12 @@
 version: '3.9'
-name: clone
+name: typescript-backend
 services:
     api:
-        container_name: clone_api
+        container_name: typescript-backend_api
         depends_on:
             - mongo
         build: .
-        image: clone_api
+        image: typescript-backend_api
         restart: always
         ports:
             - '3000:3000'
@@ -17,7 +17,7 @@ services:
         volumes:
             - './volumes/storage:/usr/clone/dist/public'
     mongo:
-        container_name: clone_mongo
+        container_name: typescript-backend_mongo
         image: mongo
         restart: unless-stopped
         volumes:
