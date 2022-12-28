@@ -1,5 +1,5 @@
 import parsePhoneNumber from 'libphonenumber-js'
-import twilio from 'twilio'
+const twilio = require('twilio');
 
 const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN)
 
